@@ -1,11 +1,11 @@
-name: Jekyll Tests
+name: Ankit Tests
 
 on: [push, pull_request]
 
 jobs:
-  Test_Jekyll:
+  Test_Ankit:
     runs-on: ubuntu-latest
-    name: Test Jekyll
+    name: Test Ankit
     steps:
     - uses: actions/checkout@v1
 
