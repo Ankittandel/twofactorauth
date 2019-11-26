@@ -1,11 +1,11 @@
-name: Jekyll Tests
+name: Ankit Tests
 
 on: [push, pull_request]
 
 jobs:
-  Test_Jekyll:
+  Test_Ankit:
     runs-on: ubuntu-latest
-    name: Test Jekyll
+    name: Test Ankit
     steps:
     - uses: actions/checkout@v1
 
@@ -23,7 +23,7 @@ jobs:
       run: bundle install --path vendor/bundle
 
     - name: Build site
-      run: bundle exec jekyll build
+      run: bundle exec Ankit build
       timeout-minutes: 1
 
     - name: Run build checks
@@ -34,5 +34,5 @@ jobs:
       env:
         NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
-    - name: Test JSON files
-      run: bundle exec rake jsonlint
+    - name: Test PUZZLE files
+      run: bundle exec rake puzzlelint
